@@ -9,6 +9,7 @@ ENGINE_STRUCTURES = {
 		"src",
 		"assets/sprites",
 		"assets/sounds",
+		"assets/music",
 		"assets/fonts",
 	],
 	"godot": [
@@ -23,7 +24,7 @@ ENGINE_STRUCTURES = {
 	],
 }
 
-def create_project(name, engine, theme=None, license_type="MIT", git=False):
+def create_project(name, engine, license_type="MIT", git=False):
 	project_dir = Path(name.replace(" ", "_").lower())
 
 	if project_dir.exists():
@@ -42,8 +43,6 @@ def create_project(name, engine, theme=None, license_type="MIT", git=False):
 		os.makedirs(project_dir / folder, exist_ok=True)
 
 	# Common files for all engines
-	write_file(project_dir / "README.md", f"# {name}\n\nTheme: {theme or 'N/A'}\nEngine: {engine}\n")
-	write_file(project_dir / "requirements.txt", "")
 	write_file(project_dir / "LICENSE", f"License: {license_type}\n")
 
 	# Copy engine-specific templates
