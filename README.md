@@ -1,8 +1,8 @@
 <p align="center">
 	<img src="https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white">
 	<img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-magenta?&logoColor=white">
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen">
-  <img src="https://img.shields.io/badge/Contributions-Welcome-yellow">
+  	<img src="https://img.shields.io/badge/Status-Active-brightgreen">
+ 	<img src="https://img.shields.io/badge/Contributions-Welcome-yellow">
 	<img src="https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20Windows%20(Bash)-lightgrey?logo=linux&logoColor=white">
 	<img src="https://img.shields.io/badge/License-MIT-green">
 </p>
@@ -30,7 +30,7 @@ pip install jaminit
 Create a new game jam project:
 
 ```bash
-jaminit new "Mini Jam 183" --engine pygame --theme "Dreams" --license MIT --git
+jaminit new "Mini Jam 183" --engine pygame --license MIT --git
 ```
 
 Example output:
@@ -38,10 +38,13 @@ Example output:
 ```yaml
 mini_jam_183_dreams/
 ├── src/
-│   └── main.py
+│   ├── main.py
+│	├── settings.py
+│   └── player.py
 ├── assets/
 │   ├── sprites/
 │   ├── sounds/
+│   ├── music/
 │   └── fonts/
 ├── README.md
 ├── LICENSE
