@@ -20,7 +20,7 @@ It aims to reduce setup time and promote consistency across multiple game jam pr
 
 
 ## Installation
-JamInit requires Python 3.10 or higher.
+JamInit requires Python 3.12 or higher.
 
 ```bash
 git clone https://github.com/egeltorp/jaminit.git
