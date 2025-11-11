@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jaminit"
+version = "0.1.0"
+description = "A command-line tool for initializing structured game jam projects."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+	{ name = "Theodor Holmberg", email = "35803316+egeltorp@users.noreply.github.com" }
+]
+maintainers = [
+	{ name = "Theodor Holmberg" }
+]
+keywords = ["gamedev", "tooling", "cli", "automation", "game jam"]
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.12",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+	"Intended Audience :: Game Developers",
+	"Topic :: Software Development :: Build Tools",
+	"Topic :: Games/Entertainment :: Tools/Editors"
+]
+
+dependencies = [
+    "argparse",
+	"jinja2",
+	"rich",
+	"pyyaml",
+	"requests"
+]
+
+[project.optional-dependencies]
+dev = [
+	"pytest",
+	"black"
+]
+
+[project.urls]
+Homepage = "https://github.com/egeltorp/jaminit"
+Issues = "https://github.com/egeltorp/jaminit/issues"
+
+[project.scripts]
+jaminit = "jaminit.cli:main"
