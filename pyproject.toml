@@ -18,12 +18,12 @@ maintainers = [
 keywords = ["gamedev", "tooling", "cli", "automation", "game jam"]
 classifiers = [
 	"Programming Language :: Python :: 3",
-	"Programming Language :: Python :: 3.12",
+	"Programming Language :: Python :: 3.10",
 	"License :: OSI Approved :: MIT License",
 	"Operating System :: OS Independent",
 	"Intended Audience :: Developers",
 	"Topic :: Software Development :: Build Tools",
-	"Topic :: Games/Entertainment :: Tools/Editors"
+	"Topic :: Games/Entertainment"
 ]
 
 dependencies = [
