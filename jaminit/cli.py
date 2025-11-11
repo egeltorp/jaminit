@@ -7,8 +7,15 @@ from jaminit.generator import create_project
 def main():
 	parser = argparse.ArgumentParser(
 		prog="jaminit",
-		description="Initialize structured game jam projects."
+        description=(
+    "JamInit — Initialize structured game jam projects fast.\n\n"
+    "Examples:\n"
+    "  jaminit new \"Mini Jam 183\" --engine pygame --license GPL\n"
+    "  jaminit new \"Godot Jam\" --engine godot --git"
+    ),
+	    formatter_class=argparse.RawTextHelpFormatter
 	)
+	
 	subparsers = parser.add_subparsers(dest="command")
 
 	# --- Subcommand: new ---
