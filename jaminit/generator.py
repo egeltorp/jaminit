@@ -4,6 +4,25 @@ import os
 from pathlib import Path
 from jaminit.utils import write_file, copy_template, init_git_repo
 
+ENGINE_STRUCTURES = {
+	"pygame": [
+		"src",
+		"assets/sprites",
+		"assets/sounds",
+		"assets/fonts",
+	],
+	"godot": [
+		"scenes",
+		"scripts",
+		"assets",
+	],
+	"unity": [
+		"Assets",
+		"ProjectSettings",
+		"Packages",
+	],
+}
+
 def create_project(name, engine, theme=None, license_type="MIT", git=False):
 	project_dir = Path(name.replace(" ", "_").lower())
 
@@ -12,11 +31,17 @@ def create_project(name, engine, theme=None, license_type="MIT", git=False):
 		return
 
 	print(f"Creating new project at {project_dir}/")
-	os.makedirs(project_dir / "src", exist_ok=True)
-	os.makedirs(project_dir / "assets" / "sprites", exist_ok=True)
-	os.makedirs(project_dir / "assets" / "sounds", exist_ok=True)
-	os.makedirs(project_dir / "assets" / "fonts", exist_ok=True)
 
+	# Pick folder layout for the chosen engine
+	folders = ENGINE_STRUCTURES.get(engine.lower())
+	if not folders:
+		print(f"Unknown engine '{engine}'. Available: {', '.join(ENGINE_STRUCTURES)}")
+		return
+
+	for folder in folders:
+		os.makedirs(project_dir / folder, exist_ok=True)
+
+	# Common files for all engines
 	write_file(project_dir / "README.md", f"# {name}\n\nTheme: {theme or 'N/A'}\nEngine: {engine}\n")
 	write_file(project_dir / "requirements.txt", "")
 	write_file(project_dir / "LICENSE", f"License: {license_type}\n")
