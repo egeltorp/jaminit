@@ -72,6 +72,38 @@ jaminit --help
 | **v1.0.0** | Stable release | Comprehensive documentation, unit tests, and CI integration (GitHub Actions). Command autocompletion for Bash, Zsh, and PowerShell. |
 
 
+## Repository Structure
+
+```yaml
+jaminit/
+├── jaminit/
+│ ├── init.py
+│ ├── cli.py # Handles command-line parsing and entrypoint
+│ ├── generator.py # Core logic for creating folders and files
+│ ├── templates/
+│ │ ├── pygame/ # Engine-specific templates
+│ │ ├── godot/
+│ │ ├── unity/
+│ │ └── common/ # Shared templates like README, LICENSE, etc.
+│ └── utils.py # Helper functions
+│
+├── tests/
+│ ├── init.py
+│ ├── test_cli.py
+│ ├── test_generator.py
+│ └── test_templates.py
+│
+├── scripts/
+│ └── build_release.py # Optional automation for packaging
+│
+├── LICENSE
+├── README.md
+├── pyproject.toml # For modern packaging
+├── setup.cfg # Metadata and configuration
+├── requirements.txt
+└── .gitignore
+```
+
 ## Contributing
 Contributions are welcome.
 Open an issue before submitting major changes.
