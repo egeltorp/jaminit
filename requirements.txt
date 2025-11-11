@@ -1,0 +1,10 @@
+# Core dependencies
+argparse               # Command-line argument parsing (built into Python, kept here for clarity)
+jinja2                 # Template rendering for README, LICENSE, and file generation
+rich                   # Colored console output, progress bars, and better CLI UX
+pyyaml                 # Optional: for reading/writing user config files or templates
+requests               # Optional: for future Itch.io/Mini Jam API integration
+
+# Development and testing
+pytest                 # Unit testing
+black                  # Code formatter
