@@ -63,13 +63,11 @@ jaminit --help
 | Version | Milestone | Description |
 |:--------:|:-----------|:-------------|
 | **v0.1.0** | Core functionality | Implement base CLI using `argparse`. Add support for initializing Pygame projects with predefined folder structure and template files. Include auto-generated README, LICENSE, and `.gitignore`. |
-| **v0.2.0** | Multi-engine support | Add `rich` integration. Add templates for Godot and Unity projects. Introduce a shared configuration file defining default directory layout and file templates per engine. |
-| **v0.3.0** | Git and license automation | Add optional `--git` flag to automatically run `git init` and create a `.gitignore`. Include `--license` option for MIT, GPL, CC-BY, and Unlicensed. Generate an automatic license file from a library. |
-| **v0.4.0** | Template customization | Allow users to define and store custom templates under `~/.jaminit/templates/`. Add `jaminit template create` and `jaminit template list` commands. |
-| **v0.5.0** | Metadata and config files | Introduce a `.jaminit.json` configuration file per project to store metadata (jam name, engine, theme, version). Add command to regenerate project README from metadata. |
-| **v0.6.0** | Project regeneration | Add `jaminit refresh` to reapply template updates to an existing project without overwriting code. |
-| **v0.7.0** | Cross-platform polish | Add full Windows/macOS/Linux support testing, path normalization, and graceful error handling for filesystem issues. |
-| **v0.8.0** | Interactive mode | Add optional interactive wizard (`jaminit new` without args) that prompts the user for engine, theme, and license step-by-step. |
+| **v0.2.0** | Multi-engine support | Add `rich` integration. Add templates for Godot, PICO-8 and Unity projects. Introduce a shared configuration file defining default directory layout and file templates per engine. |
+| **v0.x.0** | Git and license automation | Add optional `--git` flag to automatically run `git init` and create a `.gitignore`. Include `--license` option for MIT, GPL, CC-BY, and Unlicensed. Generate an automatic license file from a library. |
+| **v0.x.0** | Template customization | Allow users to define and store custom templates under `~/.jaminit/templates/`. Add `jaminit template create` and `jaminit template list` commands. |
+| **v0.x.0** | Cross-platform polish | Add full Windows/macOS/Linux support testing, path normalization, and graceful error handling for filesystem issues. |
+| **v0.x.0** | Interactive mode | Add optional interactive wizard (`jaminit new` without args) that prompts the user for engine, theme, and license step-by-step. |
 | **v1.0.0** | Stable release | Comprehensive documentation, unit tests, and CI integration (GitHub Actions). Command autocompletion for Bash, Zsh, and PowerShell. |
 
 
